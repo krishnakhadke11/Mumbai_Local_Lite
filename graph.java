@@ -132,6 +132,26 @@ public class graph {
 
          return new pathOrDistance(minDistFromSrc.get(dest),path);
     }
+    private List<String> get_interchanges(List<String> path){
+         int i=0;
+         int j=0;
+         int interchange =0;
+         List<String> listInter = new ArrayList<>();
+         while(i<path.size() && j<path.size()){
+             String iAbbr = path.get(i).substring(path.get(i).indexOf("~")+1);
+             String jAbbr = path.get(j).substring(path.get(j).indexOf("~")+1);
+             if(iAbbr.equals(jAbbr)){
+                 j++;
+             }else{
+                 String s = path.get(i)+"=>"+path.get(j-1);
+                 listInter.add(s);
+                 i=j;
+                 interchange++;
+             }
+         }
+         listInter.add(String.valueOf(interchange+1));
+         return listInter;
+    }
     public static void main(String[] args) throws IOException {
         graph g = new graph();
 //        create_map(g);
@@ -189,7 +209,42 @@ public class graph {
 //                    System.out.println("Case 4");
 
                 }
-                case 5 -> System.out.println("Case 5");
+                case 5 -> {
+                    System.out.println("Case 5");
+                    g.display_stations();
+                    String src = "";
+                    String dest = "";
+                    System.out.println("\n Enter src Serial Number");
+                    int choice = Integer.parseInt(inp.readLine());
+                    if (choice < 0 || choice > totalStations.size()) {
+                        System.out.println("Invalid choice");
+                        System.exit(0);
+                    } else {
+                        src = totalStations.get(choice - 1);
+                        choice = -1;
+                    }
+                    System.out.println("Enter Destination Serial Number");
+                    choice = Integer.parseInt(inp.readLine());
+                    if (choice < 0 || choice > totalStations.size()) {
+                        System.out.println("Invalid choice");
+                        System.exit(0);
+                    } else {
+                        dest = totalStations.get(choice - 1);
+                    }
+                    System.out.println("SOURCE STATION : " + src);
+                    System.out.println("Destination STATION : " + dest);
+                    pathOrDistance pathAndDist = g.shortest_path(src,dest);
+                    System.out.println("DISTANCE : " + pathAndDist.shortestDist);
+                    System.out.println("NUMBER OF INTERCHANGES : " + (pathAndDist.path.size()-1));
+                    System.out.println("~~~~~~~~~~~~~");
+                    System.out.println("START  ==>  " + src);
+                    for(String it :pathAndDist.path){
+                        System.out.println(it);
+                    }
+                    System.out.print("   ==>    END");
+                    System.out.println("\n~~~~~~~~~~~~~");
+                }
+
                 case 6 -> System.out.println("Case 6");
                 case 7 -> System.exit(0);
                 default -> {  //If switch expression does not match with any case,
