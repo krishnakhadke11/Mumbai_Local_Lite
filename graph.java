@@ -32,46 +32,139 @@ public class graph {
         local_map.get(node2).add(new pair(node1,dist));
     }
     private static void create_map(){
-        totalStations.add("Noida Sector 62~B");
-        totalStations.add("Botanical Garden~B");
-        totalStations.add("Yamuna Bank~B");
-        totalStations.add("Rajiv Chowk~BY");
-        totalStations.add("Vaishali~B");
-        totalStations.add("Moti Nagar~B");
-        totalStations.add("Janak Puri West~BO");
-        totalStations.add("Dwarka Sector 21~B");
-        totalStations.add("Huda City Center~Y");
-        totalStations.add("Saket~Y");
-        totalStations.add("Vishwavidyalaya~Y");
-        totalStations.add("Chandni Chowk~Y");
-        totalStations.add("New Delhi~YO");
-        totalStations.add("AIIMS~Y");
-        totalStations.add("Shivaji Stadium~O");
-        totalStations.add("DDS Campus~O");
-        totalStations.add("IGI Airport~O");
-        totalStations.add("Rajouri Garden~BP");
-        totalStations.add("Netaji Subhash Place~PR");
-        totalStations.add("Punjabi Bagh West~P");
+//        totalStations.add("Noida Sector 62~B");
+//        totalStations.add("Botanical Garden~B");
+//        totalStations.add("Yamuna Bank~B");
+//        totalStations.add("Rajiv Chowk~BY");
+//        totalStations.add("Vaishali~B");
+//        totalStations.add("Moti Nagar~B");
+//        totalStations.add("Janak Puri West~BO");
+//        totalStations.add("Dwarka Sector 21~B");
+//        totalStations.add("Huda City Center~Y");
+//        totalStations.add("Saket~Y");
+//        totalStations.add("Vishwavidyalaya~Y");
+//        totalStations.add("Chandni Chowk~Y");
+//        totalStations.add("New Delhi~YO");
+//        totalStations.add("AIIMS~Y");
+//        totalStations.add("Shivaji Stadium~O");
+//        totalStations.add("DDS Campus~O");
+//        totalStations.add("IGI Airport~O");
+//        totalStations.add("Rajouri Garden~BP");
+//        totalStations.add("Netaji Subhash Place~PR");
+//        totalStations.add("Punjabi Bagh West~P");
+//
+//        addEdge("Noida Sector 62~B", "Botanical Garden~B", 8);
+//        addEdge("Botanical Garden~B", "Yamuna Bank~B", 10);
+//        addEdge("Yamuna Bank~B", "Vaishali~B", 8);
+//        addEdge("Yamuna Bank~B", "Rajiv Chowk~BY", 6);
+//        addEdge("Rajiv Chowk~BY", "Moti Nagar~B", 9);
+//        addEdge("Moti Nagar~B", "Janak Puri West~BO", 7);
+//        addEdge("Janak Puri West~BO", "Dwarka Sector 21~B", 6);
+//        addEdge("Huda City Center~Y", "Saket~Y", 15);
+//        addEdge("Saket~Y", "AIIMS~Y", 6);
+//        addEdge("AIIMS~Y", "Rajiv Chowk~BY", 7);
+//        addEdge("Rajiv Chowk~BY", "New Delhi~YO", 1);
+//        addEdge("New Delhi~YO", "Chandni Chowk~Y", 2);
+//        addEdge("Chandni Chowk~Y", "Vishwavidyalaya~Y", 5);
+//        addEdge("New Delhi~YO", "Shivaji Stadium~O", 2);
+//        addEdge("Shivaji Stadium~O", "DDS Campus~O", 7);
+//        addEdge("DDS Campus~O", "IGI Airport~O", 8);
+//        addEdge("Moti Nagar~B", "Rajouri Garden~BP", 2);
+//        addEdge("Punjabi Bagh West~P", "Rajouri Garden~BP", 2);
+//        addEdge("Punjabi Bagh West~P", "Netaji Subhash Place~PR", 3);
+        totalStations.add("Panvel~H");
+        totalStations.add("Khandeshwar~H");
+        totalStations.add("Mansarovar~H");
+        totalStations.add("Kharghar~H");
+        totalStations.add("Belapur~H");
+        totalStations.add("Seawood~H");
+        totalStations.add("Nerul~H");
+        totalStations.add("Juinagar~H");
+        totalStations.add("Sanpada~H");
+        totalStations.add("Vashi~H");
+        totalStations.add("Mankhurd~H");
+        totalStations.add("Govandi~H");
+        totalStations.add("Chembur~H");
+        totalStations.add("Tilaknagar~H");
+        totalStations.add("Kurla~H");
+        totalStations.add("Chunabhatti~H");
+        totalStations.add("Gtb~H");
+        totalStations.add("Vadala~H");
+        totalStations.add("Sewri~H");
+        totalStations.add("CottonGreen~H");
+        totalStations.add("ReayRoad~H");
+        totalStations.add("Dockyard~H");
+        totalStations.add("Sandhurst~H");
+        totalStations.add("Masjid~H");
+        totalStations.add("CSMT~H");
+        //H&W --> Harbour & Western line stations
+        totalStations.add("KingCircle~W&H");
+        totalStations.add("Mahim~W&H");
+        totalStations.add("Bandra~W&H");
+        totalStations.add("KharRoad~W&H");
+        totalStations.add("Santacruz~W&H");
+        totalStations.add("VileParle~W&H");
+        totalStations.add("Andheri~W&H");
+        totalStations.add("Jogeshwari~W&H");
+        totalStations.add("RamMandir~W&H");
+        totalStations.add("Goregaon~W&H");
+        totalStations.add("Malad~W&H");
+        totalStations.add("Kandivli~W&H");
+        totalStations.add("Borivali~W&H");
 
-        addEdge("Noida Sector 62~B", "Botanical Garden~B", 8);
-        addEdge("Botanical Garden~B", "Yamuna Bank~B", 10);
-        addEdge("Yamuna Bank~B", "Vaishali~B", 8);
-        addEdge("Yamuna Bank~B", "Rajiv Chowk~BY", 6);
-        addEdge("Rajiv Chowk~BY", "Moti Nagar~B", 9);
-        addEdge("Moti Nagar~B", "Janak Puri West~BO", 7);
-        addEdge("Janak Puri West~BO", "Dwarka Sector 21~B", 6);
-        addEdge("Huda City Center~Y", "Saket~Y", 15);
-        addEdge("Saket~Y", "AIIMS~Y", 6);
-        addEdge("AIIMS~Y", "Rajiv Chowk~BY", 7);
-        addEdge("Rajiv Chowk~BY", "New Delhi~YO", 1);
-        addEdge("New Delhi~YO", "Chandni Chowk~Y", 2);
-        addEdge("Chandni Chowk~Y", "Vishwavidyalaya~Y", 5);
-        addEdge("New Delhi~YO", "Shivaji Stadium~O", 2);
-        addEdge("Shivaji Stadium~O", "DDS Campus~O", 7);
-        addEdge("DDS Campus~O", "IGI Airport~O", 8);
-        addEdge("Moti Nagar~B", "Rajouri Garden~BP", 2);
-        addEdge("Punjabi Bagh West~P", "Rajouri Garden~BP", 2);
-        addEdge("Punjabi Bagh West~P", "Netaji Subhash Place~PR", 3);
+
+
+
+        addEdge("Panvel~H", "Khandeshwar~H", 3);
+        addEdge("Khandeshwar~H", "Mansarovar~H", 3);
+        addEdge("Mansarovar~H", "Kharghar~H", 3);
+        addEdge("Kharghar~H", "Belapur~H", 4);
+        addEdge("Belapur~H", "Seawood~H", 4);
+        addEdge("Seawood~H", "Nerul~H", 3);
+        addEdge("Nerul~H", "Juinagar~H", 3);
+        addEdge("Juinagar~H", "Sanpada~H", 3);
+        addEdge("Sanpada~H", "Vashi~H", 3);
+        addEdge("Vashi~H", "Mankhurd~H", 8);
+        addEdge("Mankhurd~H", "Govandi~H", 4);
+        addEdge("Govandi~H", "Chembur~H", 4);
+        addEdge("Chembur~H", "Tilaknagar~H", 3);
+        addEdge("Tilaknagar~H", "Kurla~H", 3);
+        addEdge("Kurla~H", "Chunabhatti~H", 2);
+        addEdge("Chunabhatti~H", "Gtb~H", 2);
+        addEdge("Gtb~H", "Vadala~H", 2);
+        addEdge("Vadala~H", "Sewri~H", 2);
+        addEdge("Sewri~H", "CottonGreen~H", 1);
+        addEdge("CottonGreen~H", "ReayRoad~H", 1);
+        addEdge("ReayRoad~H", "Dockyard~H", 1);
+        addEdge("Dockyard~H", "Sandhurst~H", 2);
+        addEdge("Sandhurst~H", "Masjid~H", 1);
+        addEdge("Masjid~H", "CSMT~H", 1);
+
+        //H&W --> Harbour & Western line stations
+        addEdge("Vadala~H", "KingCircle~W&H", 3);
+        addEdge("KingCircle~W&H", "Mahim~W&H", 3);
+        addEdge("Mahim~W&H", "Bandra~W&H", 4);
+        addEdge("Bandra~W&H", "KharRoad~W&H", 2);
+        addEdge("KharRoad~W&H", "Santacruz~W&H", 1);
+        addEdge("Santacruz~W&H", "VileParle~W&H", 2);
+        addEdge("VileParle~W&H", "Andheri~W&H", 2);
+        addEdge("Andheri~W&H", "Jogeshwari~W&H", 2);
+        addEdge("Jogeshwari~W&H", "RamMandir~W&H", 2);
+        addEdge("RamMandir~W&H", "Goregaon~W&H", 2);
+        addEdge("Goregaon~W&H", "Malad~W&H", 2);
+        addEdge("Malad~W&H", "Kandivli~W&H", 1);
+        addEdge("Kandivli~W&HW", "Borivali~W&H", 3);
+
+
+
+
+
+
+
+
+
+
+
     }
     public void display_stations(){
         System.out.println("\n***********************************************************************\n");
@@ -82,7 +175,7 @@ public class graph {
         System.out.println("\n***********************************************************************\n");
     }
     public void display_map(){
-        System.out.println("\t Delhi Metro Map");
+        System.out.println("\t Mumbai Local Map");
         System.out.println("\t------------------");
         System.out.println("----------------------------------------------------\n");
         for(HashMap.Entry<String,List<pair>> entry : local_map.entrySet()){
@@ -109,7 +202,9 @@ public class graph {
          while(!minHeap.isEmpty()){
              String node = minHeap.peek().node;
              int d = minHeap.poll().dist;
+//             System.out.println(node);
              for(pair it : local_map.get(node)){
+//                 System.out.println(node);
                  if(d+it.dist<minDistFromSrc.get(it.node)){
                     minDistFromSrc.put(it.node,d+it.dist);
                     minHeap.add(new pair(it.node,minDistFromSrc.get(it.node)));
@@ -142,13 +237,17 @@ public class graph {
              String jAbbr = path.get(j).substring(path.get(j).indexOf("~")+1);
              if(iAbbr.equals(jAbbr)){
                  j++;
-             }else{
+             }else if(iAbbr.charAt(0) == jAbbr.charAt(0)){
+                 j++;
+             }
+             else{
                  String s = path.get(i)+"=>"+path.get(j-1);
                  listInter.add(s);
                  i=j;
                  interchange++;
              }
          }
+         listInter.add(path.get(i-1)+"=>"+path.get(j-1));
          listInter.add(String.valueOf(interchange+1));
          return listInter;
     }
@@ -234,15 +333,20 @@ public class graph {
                     System.out.println("SOURCE STATION : " + src);
                     System.out.println("Destination STATION : " + dest);
                     pathOrDistance pathAndDist = g.shortest_path(src,dest);
-                    System.out.println("DISTANCE : " + pathAndDist.shortestDist);
-                    System.out.println("NUMBER OF INTERCHANGES : " + (pathAndDist.path.size()-1));
-                    System.out.println("~~~~~~~~~~~~~");
+                    System.out.println("DISTANCE : " + pathAndDist.shortestDist+"KM");
+                    List<String> interchanges = g.get_interchanges(pathAndDist.path);
+                    System.out.println("NUMBER OF INTERCHANGES : " + interchanges.get(interchanges.size()-1)+"\n");
+                    System.out.println("Interchange Map(From where you have to change the trains) : ");
+                    for(int i=0;i<interchanges.size()-1;i++){
+                        System.out.println(interchanges.get(i));
+                    }
+                    System.out.println("\n~~~~~~~~~~~~~List of Station btw Src And Destination~~~~~~~~~~~~~");
                     System.out.println("START  ==>  " + src);
                     for(String it :pathAndDist.path){
                         System.out.println(it);
                     }
                     System.out.print("   ==>    END");
-                    System.out.println("\n~~~~~~~~~~~~~");
+                    System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                 }
 
                 case 6 -> System.out.println("Case 6");
