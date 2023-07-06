@@ -302,7 +302,7 @@ public class graph {
                     } else {
                         dest = totalStations.get(choice - 1);
                     }
-                    System.out.println("Shortest path from " + src + " to " + dest + " : \"" + g.shortest_path(src, dest) + " KM\"");
+                    System.out.println("Shortest path from " + src + " to " + dest + " : \"" + g.shortest_path(src, dest).shortestDist + " KM\"");
                 }
                 case 4 -> {
 //                    System.out.println("Case 4");
